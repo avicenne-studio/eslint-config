@@ -2,5 +2,5 @@
 . "$(dirname -- "$0")/_/husky.sh"
 
 npm run patch
-git add *;
+git add ../package.json
 git commit -m "Patch package.json version"
