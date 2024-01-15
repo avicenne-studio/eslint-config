@@ -7,8 +7,7 @@
     "./index.js"
   ],
   "scripts": {
-    "patch": "npm version patch",
-    "prepare": "husky install"
+    "patch": "npm version patch"
   },
   "keywords": [
     "eslint",
