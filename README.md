@@ -2,7 +2,7 @@
 
 This library contains the eslint configuration used by Avicenne.
 
-## Installing the library
+## Installing the library locally
 
 Since the organization is private, you'll need to be a member of the organization to install the library.
 
@@ -42,4 +42,19 @@ In order to publish the library, update manually the version in the `package.jso
    git tag v[your-package-version]
    git push origin v[your-package-version]
    git push origin main
+```
+
+A github action will automatically publish the package to the npm registry.
+
+## Installing the library within a github action
+
+If the repository A is trying to install this package within a github action, go to the [package settings](https://github.com/orgs/avicenne-studio/packages/npm/eslint-config/settings), and add the repository to the list of repositories that can install the package.
+
+Next go to the repository A, and add the following to install dependencies step:
+
+```yaml
+ - name: Install dependencies
+     run: npm ci
+     env:
+      NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 ```
