@@ -35,4 +35,11 @@ module.exports = {
 
 ## Publishing the library
 
-The publication of the library is done automatically using github actions.
+In order to publish the library, update manually the version in the `package.json` file and run the following command:
+
+```bash
+   git commit -m "update package version"
+   git tag v[your-package-version]
+   git push origin v[your-package-version]
+   git push origin main
+```
