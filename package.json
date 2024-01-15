@@ -1,0 +1,30 @@
+{
+  "name": "@avicenne-studio/eslint-config",
+  "version": "1.0.0",
+  "description": "Avicenne's shared eslint configuration package",
+  "main": "index.js",
+  "files": [
+    "./index.js"
+  ],
+  "scripts": {
+    "patch": "npm version patch",
+    "prepare": "husky install"
+  },
+  "keywords": [
+    "eslint",
+    "eslintconfig"
+  ],
+  "author": "@farischt",
+  "license": "ISC",
+  "peerDependencies": {
+    "eslint": ">= 8",
+    "eslint-config-prettier": ">=9",
+    "eslint-plugin-import": ">=2",
+    "eslint-plugin-prettier": ">=5",
+    "eslint-plugin-simple-import-sort": ">=10",
+    "@typescript-eslint/eslint-plugin": ">=5"
+  },
+  "devDependencies": {
+    "husky": "^8.0.0"
+  }
+}
