@@ -3,4 +3,4 @@
 
 npm run patch
 git add ./package.json
-git commit -m "Patch package.json version"
+# git commit -m "Patch package.json version"
