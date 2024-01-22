@@ -19,7 +19,6 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
-          registry-url: https://npm.pkg.github.com
           cache: npm
 
       - name: Check tag version with package.json version
@@ -38,7 +37,7 @@ jobs:
       - name: Update version
         run: npm version $TAG_VERSION --allow-same-version
 
-      - name: Publish to GitHub Packages
-        run: npm publish --access public
+      - name: Publish to NPM
+        run: npm publish --access=public
         env:
-          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NODE_AUTH_TOKEN: ${{ secrets.NODE_AUTH_TOKEN }}
