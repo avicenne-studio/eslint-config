@@ -1,6 +1,6 @@
 {
   "name": "@avicenne-studio/eslint-config",
-  "version": "1.0.9",
+  "version": "1.0.10",
   "description": "Avicenne's shared eslint configuration package",
   "main": "index.js",
   "files": [
