@@ -1,11 +1,11 @@
 # @avicenne-studio/eslint-config
 
-This library contains the eslint configuration used by Avicenne-Studio.
+This library contains the [ESLint](https://eslint.org) configuration used by [Avicenne Studio](https://avicenne.studio).
 
-## Installing the library locally
+## Installing the library
 
 ```bash
-npm install -D @avicenne-studio/eslint-config
+npm install --save-dev @avicenne-studio/eslint-config
 ```
 
 ## Using the library
@@ -14,18 +14,24 @@ To use the library, you'll need to add the following to your `.eslintrc.js` file
 
 ```js
 module.exports = {
-  extends: ["@avicenne-studio"],
+  extends: "@avicenne-studio",
 };
 ```
 
-## Publishing the library
+## Publishing updates
 
-In order to publish the library, update manually the version in the `package.json` file and run the following command:
+For Avicenne Studio employees, in order to publish an update of the library, you'll need to:
+
+- Update the version field in the `package.json` file;
+- Stage and commit all changes;
+- Tag the new commit with the new version number; and
+- Push all changes to the GitHub repository.
+
+This can be done using the following commands:
 
 ```bash
-   git commit -m "update package version"
-   git tag v[your-package-version]
-   git push origin main v[your-package-version]
+npm version patch
+git push --tags
 ```
 
-A github action will automatically publish the package to the npm registry.
+A GitHub Actions workflow will then automatically publish the package to the NPM registry.
