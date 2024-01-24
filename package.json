@@ -3,6 +3,7 @@
   "version": "1.0.13",
   "description": "Avicenne Studio's shareable ESLint configuration",
   "main": "index.js",
+  "repository": "github:avicenne-studio/eslint-config",
   "files": [
     "./index.js"
   ],
@@ -10,7 +11,10 @@
     "eslint",
     "eslintconfig"
   ],
-  "author": "@farischt",
+  "author": "Faris CHTATOU <faris.manage@gmail.com> (https://www.faris.chtatou.org)",
+  "contributors": [
+    "Aurélien <git@garnier.dev> (https://garnier.dev)"
+  ],
   "license": "ISC",
   "scripts": {
     "lint": "eslint .",
@@ -19,6 +23,7 @@
   },
   "devDependencies": {
     "@avicenne-studio/eslint-config": "^1.0.12",
+    "@avicenne-studio/prettier-config": "^1.0.0",
     "eslint": "^8.56.0",
     "prettier": "^3.2.4"
   },
@@ -28,6 +33,7 @@
     "eslint-config-prettier": ">= 9",
     "eslint-plugin-import": ">= 2",
     "eslint-plugin-prettier": ">= 5",
-    "eslint-plugin-simple-import-sort": ">= 10"
+    "eslint-plugin-simple-import-sort": ">= 10",
+    "prettier": ">= 3"
   }
 }

@@ -31,7 +31,7 @@ This can be done using the following commands:
 
 ```bash
 npm version patch
-git push --tags
+git push origin main --tags
 ```
 
 A GitHub Actions workflow will then automatically publish the package to the NPM registry.
