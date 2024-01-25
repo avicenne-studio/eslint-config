@@ -3,9 +3,12 @@
   "version": "1.0.14",
   "description": "Avicenne Studio's shareable ESLint configuration",
   "main": "index.js",
-  "repository": "github:avicenne-studio/eslint-config",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/avicenne-studio/eslint-config.git"
+  },
   "files": [
-    "./index.js"
+    "index.js"
   ],
   "keywords": [
     "eslint",
@@ -22,7 +25,7 @@
     "format": "prettier --write ."
   },
   "devDependencies": {
-    "@avicenne-studio/eslint-config": "^1.0.12",
+    "@avicenne-studio/eslint-config": "*",
     "@avicenne-studio/prettier-config": "^1.0.0",
     "eslint": "^8.56.0",
     "prettier": "^3.2.4"
