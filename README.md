@@ -2,6 +2,8 @@
 
 This library contains the [ESLint](https://eslint.org) configuration used by [Avicenne Studio](https://avicenne.studio).
 
+Consider using the [TypeScript configuration bundle](https://npm.im/@avicenne-studio/typescript-config) instead of this library directly.
+
 ## Installing the library
 
 ```bash
@@ -10,12 +12,12 @@ npm install --save-dev @avicenne-studio/eslint-config
 
 ## Using the library
 
-To use the library, you'll need to add the following to your `.eslintrc.js` file:
+To use the library, you'll need to add the following to your `.eslintrc.json` file:
 
-```js
-module.exports = {
-  extends: "@avicenne-studio",
-};
+```json
+{
+  "extends": "@avicenne-studio",
+}
 ```
 
 ## Publishing updates
