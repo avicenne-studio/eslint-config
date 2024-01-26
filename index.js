@@ -1,50 +1,49 @@
 module.exports = {
   env: {
-    node: true
+    node: true,
   },
-  plugins: ["@typescript-eslint/eslint-plugin", "import"],
+  plugins: ["@typescript-eslint", "import"],
   extends: [
     "eslint:recommended",
-    "plugin:@typescript-eslint/recommended",
+    "plugin:@typescript-eslint/strict-type-checked",
+    "plugin:@typescript-eslint/stylistic-type-checked",
+    "plugin:import/recommended",
     "plugin:prettier/recommended",
-    "plugin:import/errors",
-    "plugin:import/warnings",
   ],
+  parser: "@typescript-eslint/parser",
+  root: true,
   rules: {
-    "@typescript-eslint/interface-name-prefix": "off",
-    "@typescript-eslint/explicit-function-return-type": "off",
-    "@typescript-eslint/explicit-module-boundary-types": "off",
-    "@typescript-eslint/no-explicit-any": "warn",
-    "@typescript-eslint/ban-ts-comment": [
+    "@typescript-eslint/consistent-type-exports": "error",
+    "@typescript-eslint/consistent-type-imports": "error",
+    "@typescript-eslint/member-ordering": "error",
+    "@typescript-eslint/method-signature-style": "error",
+    "@typescript-eslint/no-import-type-side-effects": "error",
+    "@typescript-eslint/no-loop-func": "error",
+    "@typescript-eslint/no-require-imports": "error",
+    "@typescript-eslint/no-unnecessary-qualifier": "error",
+    "@typescript-eslint/no-unsafe-unary-minus": "error",
+    "@typescript-eslint/no-unused-expressions": "error",
+    "@typescript-eslint/no-unused-vars": [
       "error",
       {
-        "ts-expect-error": { descriptionFormat: "^: TS\\d+ because .+$" },
-        "ts-ignore": true,
-        "ts-nocheck": true,
-        "ts-check": false,
+        varsIgnorePattern: "^_",
       },
     ],
-    "no-console": "error",
-    "import/no-unresolved": "off",
+    "@typescript-eslint/no-use-before-define": "error",
+    "@typescript-eslint/no-useless-empty-export": "error",
+    "@typescript-eslint/prefer-destructuring": "error",
+    "@typescript-eslint/prefer-regexp-exec": "error",
+    "@typescript-eslint/promise-function-async": "error",
+    "@typescript-eslint/require-array-sort-compare": "error",
+    "@typescript-eslint/return-await": "error",
+    "@typescript-eslint/sort-type-constituents": "error",
+    "@typescript-eslint/strict-boolean-expressions": "error",
+    "@typescript-eslint/switch-exhaustiveness-check": "error",
     "import/no-extraneous-dependencies": [
       "error",
       {
         devDependencies: true,
         peerDependencies: true,
-      },
-    ],
-    "no-multiple-empty-lines": [
-      "error",
-      {
-        max: 1,
-        maxEOF: 0,
-        maxBOF: 0,
-      },
-    ],
-    "@typescript-eslint/no-unused-vars": [
-      "error",
-      {
-        varsIgnorePattern: "_",
       },
     ],
     "import/order": [
@@ -76,5 +75,18 @@ module.exports = {
         },
       },
     ],
+    "no-console": "error",
+    "no-loop-func": "off",
+    "no-return-await": "off",
+    "no-unused-expressions": "off",
+    "no-use-before-define": "off",
+    "prefer-destructuring": "off",
+    "prefer-regex-literals": [
+      "error",
+      {
+        disallowRedundantWrapping: true,
+      },
+    ],
+    "prefer-template": "error",
   },
 };

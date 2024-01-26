@@ -16,7 +16,7 @@ To use the library, you'll need to add the following to your `.eslintrc.json` fi
 
 ```json
 {
-  "extends": "@avicenne-studio",
+  "extends": "@avicenne-studio"
 }
 ```
 
