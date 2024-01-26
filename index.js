@@ -11,6 +11,9 @@ module.exports = {
     "plugin:prettier/recommended",
   ],
   parser: "@typescript-eslint/parser",
+  parserOptions: {
+    project: true,
+  },
   root: true,
   rules: {
     "@typescript-eslint/consistent-type-exports": "error",
