@@ -42,6 +42,7 @@ module.exports = {
     "@typescript-eslint/sort-type-constituents": "error",
     "@typescript-eslint/strict-boolean-expressions": "error",
     "@typescript-eslint/switch-exhaustiveness-check": "error",
+    "import/no-unresolved": "off",
     "import/no-extraneous-dependencies": [
       "error",
       {
