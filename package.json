@@ -27,7 +27,8 @@
   },
   "devDependencies": {
     "@avicenne-studio/eslint-config": "*",
-    "@avicenne-studio/prettier-config": "^1.0.0",
+    "@avicenne-studio/prettier-config": "*",
+    "@stylistic/eslint-plugin": "^1.6.0",
     "eslint": "^8.56.0",
     "prettier": "^3.2.4"
   },
