@@ -28,12 +28,13 @@
   "devDependencies": {
     "@avicenne-studio/eslint-config": "*",
     "@avicenne-studio/prettier-config": "*",
-    "@stylistic/eslint-plugin": "^1.6.0",
     "eslint": "^8.56.0",
-    "prettier": "^3.2.4"
+    "prettier": "^3.2.5"
   },
   "peerDependencies": {
-    "@typescript-eslint/eslint-plugin": ">= 5",
+    "@stylistic/eslint-plugin": ">= 1",
+    "@typescript-eslint/eslint-plugin": ">= 6",
+    "@typescript-eslint/parser": ">= 6",
     "eslint": ">= 8",
     "eslint-config-prettier": ">= 9",
     "eslint-plugin-import": ">= 2",
