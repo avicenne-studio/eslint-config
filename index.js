@@ -67,28 +67,12 @@ module.exports = {
       "error",
       {
         groups: [
-          ["external", "builtin"],
-          ["internal"],
-          ["parent", "index", "sibling"],
-        ],
-        pathGroups: [
-          {
-            pattern: "@/**",
-            group: "internal",
-          },
-          {
-            pattern: "./**",
-            group: "internal",
-          },
-          {
-            pattern: "../**",
-            group: "internal",
-          },
+          ["builtin", "external"],
+          ["internal", "sibling", "parent", "index"],
         ],
         "newlines-between": "always",
         alphabetize: {
           order: "asc",
-          caseInsensitive: true,
         },
       },
     ],
