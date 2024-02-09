@@ -20,6 +20,7 @@ module.exports = {
     "@stylistic/arrow-parens": ["error", "always"],
     "@stylistic/brace-style": "off",
     "@stylistic/indent": "off",
+    "@stylistic/indent-binary-ops": "off",
     "@stylistic/member-delimiter-style": ["error", { "multiline": { "delimiter": "semi" } }],
     "@stylistic/operator-linebreak": ["error", "after", { "overrides": { "?": "before", ":": "before" } }],
     "@stylistic/padding-line-between-statements": "off",
