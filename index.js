@@ -25,6 +25,7 @@ module.exports = {
       "error",
       { multiline: { delimiter: "semi" } },
     ],
+    "@stylistic/multiline-ternary": ["error", "never"],
     "@stylistic/operator-linebreak": [
       "error",
       "after",
