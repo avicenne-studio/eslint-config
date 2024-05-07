@@ -2,12 +2,10 @@ module.exports = {
   env: {
     node: true,
   },
-  plugins: ["@typescript-eslint", "@stylistic", "import"],
+  plugins: ["@typescript-eslint", "import"],
   extends: [
     "eslint:recommended",
     "plugin:@typescript-eslint/strict-type-checked",
-    "plugin:@typescript-eslint/stylistic-type-checked",
-    "plugin:@stylistic/recommended-extends",
     "plugin:import/recommended",
     "plugin:prettier/recommended",
   ],
@@ -17,24 +15,6 @@ module.exports = {
   },
   root: true,
   rules: {
-    "@stylistic/arrow-parens": ["error", "always"],
-    "@stylistic/brace-style": "off",
-    "@stylistic/indent": "off",
-    "@stylistic/indent-binary-ops": "off",
-    "@stylistic/member-delimiter-style": [
-      "error",
-      { multiline: { delimiter: "semi" } },
-    ],
-    "@stylistic/multiline-ternary": ["error", "always-multiline"],
-    "@stylistic/operator-linebreak": [
-      "error",
-      "after",
-      { overrides: { "?": "before", ":": "before" } },
-    ],
-    "@stylistic/padding-line-between-statements": "off",
-    "@stylistic/quote-props": ["error", "as-needed"],
-    "@stylistic/quotes": ["error", "double", { avoidEscape: true }],
-    "@stylistic/semi": ["error", "always"],
     "@typescript-eslint/consistent-type-exports": "error",
     "@typescript-eslint/consistent-type-imports": "error",
     "@typescript-eslint/member-ordering": "error",
