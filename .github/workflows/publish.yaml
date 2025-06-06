@@ -1,0 +1,47 @@
+name: Publish NPM package
+
+on:
+  push:
+    tags:
+      - v*.*.*
+      - v*.*.*-*-*
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+
+    permissions:
+      id-token: write
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          registry-url: https://registry.npmjs.org
+          cache: npm
+
+      - name: Check tag version with package.json version
+        run: |
+          TAG_VERSION=$(echo $GITHUB_REF | sed -n 's/refs\/tags\/v\([0-9]*\.[0-9]*\.[0-9]*\(-[a-zA-Z0-9]*\)\?\)/\1/p')
+          PACKAGE_VERSION=$(node -p "require('./package.json').version")
+
+          if [ "$TAG_VERSION" != "$PACKAGE_VERSION" ]; then
+            echo "Tag version ($TAG_VERSION) does not match package.json version ($PACKAGE_VERSION)"
+            exit 1
+          fi
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Update version
+        run: npm version $TAG_VERSION --allow-same-version
+
+      - name: Publish to NPM
+        run: npm publish --provenance --access=public
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NODE_AUTH_TOKEN }}
