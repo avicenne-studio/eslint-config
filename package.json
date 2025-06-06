@@ -13,7 +13,8 @@
   ],
   "author": "Faris CHTATOU <faris.manage@gmail.com>",
   "contributors": [
-    "Paul Haddou <paul@avicenne.studio> "
+    "Aurélien Garnier",
+    "Paul Haddou <paul@avicenne.studio>"
   ],
   "exports": {
     "./base": "./base.js",

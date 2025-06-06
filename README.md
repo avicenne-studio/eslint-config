@@ -1,6 +1,6 @@
 # @avicenne-studio/eslint-config
 
-This library contains the [ESLint](https://eslint.org) configuration used by [Avicenne Studio](https://avicenne.studio).
+This library contains the [ESLint](https://eslint.org) flat configuration used by [Avicenne Studio](https://avicenne.studio).
 
 ## Installing the library
 
@@ -12,8 +12,28 @@ npm install --save-dev @avicenne-studio/eslint-config
 
 To use the library, you'll need to add the following to your `.eslint.config.js` file:
 
+For basic configuration:
+
 ```js
-import { nextJsConfig } from "@avicenne-studio/eslint-config/next-js";
+import { baseConfig } from "@avicenne-studio/eslint-config/base";
+
+/** @type {import("eslint").Linter.Config} */
+export default baseConfig;
+```
+
+For react configuration:
+
+```js
+import { reactConfig } from "@avicenne-studio/eslint-config/react-internal";
+
+/** @type {import("eslint").Linter.Config} */
+export default reactConfig;
+```
+
+For next configuration:
+
+```js
+import { nextJsConfig } from "@avicenne-studio/eslint-config/next";
 
 /** @type {import("eslint").Linter.Config} */
 export default nextJsConfig;
